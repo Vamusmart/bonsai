@@ -28,10 +28,10 @@
  */
 
 :root {
-  --grey: #6d6b6d;
+  --grey: #e6f2ed;
   --black: #050505;
-  --red: #bb1a06;
-  --white: #ffffff;
+  --red: #127b61;
+  --green: #2ed383;
 }
 
 #home {
@@ -71,10 +71,10 @@ body {
   padding: 2rem 3rem;
   background: var(--black);
   font-size: 1.7rem;
-  color: var(--white);
+  color: var(--green);
   cursor: pointer;
   text-transform: uppercase;
-  border: 0.1rem solid var(--white);
+  border: 0.1rem solid var(--green);
   font-weight: 100;
 }
 
@@ -94,7 +94,7 @@ form .btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 2rem 3rem;
-  background: var(--white);
+  background: var(--green);
   font-size: 1.7rem;
   color: var(--black);
   cursor: pointer;
@@ -120,8 +120,8 @@ header {
 }
 
 header .logo {
-  font-size: 2rem;
-  color: var(--red);
+  font-size: 7vh;
+  /* color: var(--red); */
 }
 
 header .logo span {
@@ -131,7 +131,7 @@ header .logo span {
 header .navbar a {
   font-size: 1.7rem;
   margin-left: 2rem;
-  color: var(--white);
+  color: var(--green);
   text-align: center;
 }
 
@@ -182,7 +182,7 @@ header label {
 }
 
 .nav-links a {
-  color: var(--white);
+  color: var(--green);
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
@@ -201,7 +201,7 @@ header label {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--green);
   margin: 5px;
   transition: all 0.3s ease;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
@@ -232,10 +232,10 @@ header label {
   height: 50px;
   line-height: 50px;
   font-size: 1.5rem;
-  color: var(--white);
+  color: var(--green);
   cursor: pointer;
   text-transform: uppercase;
-  border: 0.1rem solid var(--white);
+  border: 0.1rem solid var(--green);
   background: var(--black);
   font-weight: bold;
   padding: 0.6rem 8.6rem;
@@ -402,7 +402,7 @@ header label {
   height: 12px;
   width: 12px;
   margin: 0 2px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--green);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -410,7 +410,7 @@ header label {
 
 .active,
 .dot:hover {
-  background-color: var(--white);
+  background-color: var(--green);
 }
 /* Slideshow container ends*/
 
@@ -430,7 +430,7 @@ header label {
 .card .box-container .box {
   flex: 1 1 30rem;
   margin: 1rem;
-  background: var(--white);
+  background: var(--green);
   border: 0.1rem solid rgba(0, 0, 0, 0.2);
   border-radius: 0.1rem;
   text-align: center;
@@ -536,7 +536,7 @@ img {
 
 .about .column .content p {
   font-size: 1.8rem;
-  color: var(--white);
+  color: var(--green);
   padding: 1rem 10rem;
 }
 
@@ -548,7 +548,7 @@ img {
   text-align: left;
   background: var(--black);
   color: transparent;
-  color: var(--white);
+  color: var(--green);
   font-size: 7rem;
   line-height: 6.5rem;
   padding: 0 10rem 2rem 10rem;
@@ -659,7 +659,7 @@ img {
 }
 
 .contact .column .content p {
-  color: var(--white);
+  color: var(--green);
   text-align: left;
   margin-left: 13.5rem;
   padding-bottom: 20rem;
@@ -668,7 +668,7 @@ img {
 .contact .column .heading {
   text-align: left;
   color: transparent;
-  color: var(--white);
+  color: var(--green);
   line-height: 6.5rem;
   padding-left: 13rem;
   padding-right: 13rem;
@@ -784,12 +784,12 @@ input #phone {
   float: left;
   list-style-type: none;
   font-size: 1.7rem;
-  color: var(--white);
+  color: var(--green);
 }
 
 .footer .box-container .nav-footer li a {
   display: block;
-  color: var(--white);
+  color: var(--green);
   text-decoration: none;
   list-style: none;
   margin: 2rem;
@@ -1130,7 +1130,7 @@ input #phone {
   .contact .column .heading {
     text-align: left;
     color: transparent;
-    color: var(--white);
+    color: var(--green);
     line-height: 6.5rem;
     padding-left: 0rem;
     padding-right: 0rem;

@@ -1,465 +1,335 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Bonsai di Sardegna - Oristano. L'arte dei Bonsai, consigli e storie verdi in miniatura."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bonsai di Sardegna</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./images/logo.ico" />
-    <!-- font awesome icon socials cdn link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/style.scss"> -->
-  </head>
-  <body>
-    <!-- header section starts  -->
-    <header id="navbar">
-      <a href="#" class="logo"
-        ><img
-          width="150"
-          height="40"
-          src="./images/bonsai_logo_playground.png"
-          alt="Intimo Gavini logo - Sassari"
-          class="logo"
-      /></a>
-      <ul class="nav-links">
-        <li><a href="#we">Chi siamo</a></li>
-        <li><a href="#weare">I nostri Partners</a></li>
-        <!-- <li><a href="#wedo">we do</a></li> -->
-        <!-- <li><a href="#careers">careers</a></li> -->
-        <li><a href="#contactus">Contatti</a></li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </header>
-    <!-- header section ends -->
-    <!-- home section starts  -->
-    <section class="home" id="home">
-      <div class="content">
-        <!-- Slides section starts  -->
-        <section class="features" id="features">
-          <div class="slideshow-container">
-            <!-- Full-width images with caption text -->
-            <div class="mySlides fade">
-              <img
-                width="1440"
-                height="798"
-                src="images/slide-hello.jpg"
-                alt="hello-playground"
-              />
-              <div class="text">
-                <h1>Pinky<br /><span> </span></h1>
-                <p>Azalea Satsuki Momoka</p>
-              </div>
-            </div>
-            <div class="mySlides fade">
-              <img
-                width="1440"
-                height="798"
-                src="images/slide-play.jpg"
-                alt="play-playground"
-              />
-              <div class="text">
-                <h1>Jersey<br /><span></span></h1>
-                <p>Euonymus fortunei</p>
-              </div>
-            </div>
-            <div class="mySlides fade">
-              <img
-                width="1440"
-                height="798"
-                src="images/slide-circle.jpg"
-                alt="circle-playground"
-              />
-              <div class="text">
-                <h1>Charen<br /><span></span></h1>
-                <p>Crataegus laevigata</p>
-              </div>
-            </div>
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <!-- The dots/circles -->
-            <div class="box-circles">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Bonsai Fenosu - Oristano. L'arte dei Bonsai, consigli e storie verdi in miniatura." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bonsai Fenosu</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo.ico" />
+  <!-- font awesome icon socials cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- <link rel="stylesheet" href="css/style.scss"> -->
+</head>
+<body>
+  <!-- header section starts  -->
+  <header id="navbar">
+    <a href="#" class="logo"><img width="150" height="40" src="./images/logo_bonsai_white.png" alt="Bonsai Fenosu"
+        class="logo" /></a>
+    <ul class="nav-links">
+      <li><a href="#we">Chi siamo</a></li>
+      <li><a href="#weare">I Bonsai</a></li>
+      <li><a href="#contactus">Contatti</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </header>
+  <!-- header section ends -->
+
+  <!-- home section starts  -->
+  <section class="home" id="home">
+    <div class="content">
+
+      <!-- Slides section starts  -->
+      <section class="features" id="features">
+        <div class="slideshow-container">
+          <!-- Full-width images with caption text -->
+          <div class="mySlides fade">
+            <img width="1440" height="798" src="images/slide-hello.jpg" alt="hello-playground" />
+            <div class="text">
+              <h2 class="titolo-stile">Pinky<br /><span> </span></h2>
+              <p class="testo-stile">Azalea Satsuki Momoka</p>
             </div>
           </div>
-        </section>
-        <!-- slides section ends  -->
-        <!-- box section starts  -->
-        <section class="card" id="card">
-          <div class="box-container">
-            <div class="box">
-              <div class="box-pic">
-                <img
-                  width="499"
-                  height="212"
-                  src="./images/card-play.jpg"
-                  alt="Papillon, fascino e eleganza"
-                />
-              </div>
-              <div class="box-text">
-                <p>
-                  Coltivare bonsai è un dialogo tra natura e noi stessi: non
-                  servono esperti, ma questa guida ti accompagnerà nel cammino.
-                </p>
-              </div>
-              <!-- <a href="/pdf/papillon.pdf" class="btn">scopri</a> -->
-              <!-- <a href="/pdf/Guidaalbero.pdf" class="btn">scopri</a> -->
-              <a
+          <div class="mySlides fade">
+            <img width="1440" height="798" src="images/slide-play.jpg" alt="play-playground" />
+            <div class="text">
+              <h2 class="titolo-stile">Jersey<br /><span> </span></h2>
+              <p class="testo-stile">Euonymus fortunei</p>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <img width="1440" height="798" src="images/slide-circle.jpg" alt="circle-playground" />
+            <div class="text">
+              <h2 class="titolo-stile">Charen<br /><span> </span></h2>
+              <p class="testo-stile">Crataegus laevigata</p>
+            </div>
+          </div>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <!-- The dots/circles -->
+          <div class="box-circles">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </section>
+      <!-- slides section ends  -->
+
+      <!-- box section starts  -->
+      <section class="card" id="card">
+        <div class="box-container">
+          <div class="box">
+            <div class="box-pic">
+              <img width="499" height="212" src="./images/card-play.jpg" alt="Papillon, fascino e eleganza" />
+            </div>
+            <div class="box-text">
+              <p>
+                Coltivare bonsai è un dialogo tra natura e noi stessi: non
+                servono esperti, ma questa guida ti accompagnerà nel cammino.
+              </p>
+            </div>
+            <!-- <a href="/pdf/papillon.pdf" class="btn">scopri</a> -->
+            <!-- <a href="/pdf/Guidaalbero.pdf" class="btn">scopri</a> -->
+            <!--        <a
                 href="https://github.com/Vamusmart/intimo/raw/main/pdf/papillon.pdf"
                 target="_blank"
                 class="btn"
                 >scopri</a
-              >
+              > -->
+          </div>
+          <div class="box">
+            <div class="box-pic">
+              <img width="477" height="212" src="./images/card-simplicity.jpg" alt="Ciocca, calze alta qualita" />
             </div>
-            <div class="box">
-              <div class="box-pic">
-                <img
-                  width="477"
-                  height="212"
-                  src="./images/card-simplicity.jpg"
-                  alt="Ciocca, calze alta qualita"
-                />
-              </div>
-              <div class="box-text">
-                <p>
-                  Il bonsai richiede cura, tecniche e un po' di pazienza: con
-                  attenzione, il tuo albero crescerà sano e armonioso.
-                </p>
-              </div>
-              <!-- <a href="/pdf/Tecnica.pdf" class="btn">scopri</a> -->
-              <a
+            <div class="box-text">
+              <p>
+                Il bonsai richiede cura, tecniche e un po' di pazienza: con
+                attenzione, il tuo albero crescerà sano e armonioso.
+              </p>
+            </div>
+            <!-- <a href="/pdf/Tecnica.pdf" class="btn">scopri</a> -->
+            <!--       <a
                 href="https://github.com/Vamusmart/intimo/raw/main/pdf/Ciocca_socks.pdf"
                 target="_blank"
                 class="btn"
                 >scopri</a
-              >
+              > -->
+          </div>
+          <div class="box">
+            <div class="box-pic">
+              <img width="363" height="134" src="./images/card-innovation.jpg" alt="Bretelle, alla moda e comodi" />
             </div>
-            <div class="box">
-              <div class="box-pic">
-                <img
-                  width="363"
-                  height="134"
-                  src="./images/card-innovation.jpg"
-                  alt="Bretelle, alla moda e comodi"
-                />
-              </div>
-              <div class="box-text">
-                <p>
-                  Segreti unici per ciascun bonsai e stagione, che rivelano la
-                  bellezza effimera e la forza incredibile della natura.
-                </p>
-              </div>
-              <!-- <a href="/pdf/QuattroStagioni.pdf"  class="btn">scopri</a> -->
-              <a
+            <div class="box-text">
+              <p>
+                Segreti unici per ciascun bonsai e stagione, che rivelano la
+                bellezza effimera e la forza incredibile della natura.
+              </p>
+            </div>
+            <!-- <a href="/pdf/QuattroStagioni.pdf"  class="btn">scopri</a> -->
+            <!--  <a
                 href="https://github.com/Vamusmart/intimo/raw/main/pdf/Bretelle.pdf"
                 target="_blank"
                 class="btn"
                 >scopri</a
-              >
-            </div>
+              > -->
           </div>
-        </section>
-        <!-- box sections ends  -->
-        <!-- About column section starts  -->
-        <section class="about">
-          <div class="column" id="weare">
-            <div class="image">
-              <img
-                width="1440"
-                height="600"
-                src="images/banner-we-are.jpg"
-                alt="Liabel, intimo made in Italy"
-              />
-            </div>
-            <div class="content">
-              <!-- <h1 class="heading">we<br><span>are.</span></h1> -->
-              <h1 class="heading">Bonsai<br />per me</h1>
-              <p>
-                Coltivare armonia,<br />
-                <span>un Bonsai alla volta.</span>
-              </p>
-              <div class="buttons">
-                <!-- <a href="#" class="btn">visita > </a> -->
-                <a href="https://bonsai4me.com/" target="_blank" class="btn"
-                  >visita &gt;
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="column" id="wedo">
-            <div class="image">
-              <img
-                width="1440"
-                height="600"
-                src="images/banner-we-do.jpg"
-                alt="Janira, intimo, lingerie, outwear donna"
-              />
-            </div>
-            <div class="content">
-              <h1 class="heading">Bonsai<br />Empire</h1>
-              <!-- <p>Consectetur adipisci elit.<br><span>Nulla condimentum tortor.</span></p> -->
-              <p>
-                Un viaggio tra radici,<br /><span
-                  >rami, silenzio e bellezza.</span
-                >
-              </p>
-              <div class="buttons">
-                <!-- <a href="#" class="btn">visita > </a> -->
-                <a
-                  href="https://www.bonsaiempire.com/"
-                  target="_blank"
-                  class="btn"
-                  >visita &gt;
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="column" id="careers">
-            <div class="image">
-              <img
-                width="1440"
-                height="600"
-                src="images/banner-carrers.jpg"
-                alt="Charro, intimo uomo casual e sportivo"
-              />
-            </div>
-            <div class="content">
-              <h1 class="heading">Bonsai<br />Plaza</h1>
-              <p>
-                Raffinata selezione bonsai,<br /><span
-                  >tradizione giapponese autentica.</span
-                >
-              </p>
-              <div class="buttons">
-                <a
-                  href="https://www.bonsaiplaza.com/it/"
-                  target="_blank"
-                  class="btn"
-                  >visita &gt;
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
+      <!-- box sections ends  -->
 
-        <!-- weAre section starts  -->
-        <section class="container-ajx" id="we">
-          <div class="flex-ajx">
-            <section class="colajx mainajx">
-              <div id="update">
-                <h3>
-                  Coltiviamo bonsai con passione, pazienza e rispetto per la
-                  natura.<br />
-                  La nostra storia affonda le radici in tempo, arte e armonia.
-                </h3>
-                <p>
-                  Coltiviamo bonsai con passione, pazienza e profondo rispetto
-                  per la natura, dedicando tempo e cura a ogni singolo albero.
-                  La nostra storia nasce dall’amore per questa antica arte, che
-                  unisce tradizione e creatività, riflettendo l’armonia tra uomo
-                  e ambiente. Ogni bonsai che curiamo racconta un viaggio fatto
-                  di equilibrio, crescita lenta e consapevole, valori che
-                  guidano il nostro lavoro e la nostra filosofia.
-                </p>
-                <br />
-                <h4>
-                  L’arte del bonsai, tra querce, lecci e ginepri sardi
-                  spettinati dal maestrale.
-                </h4>
-                <p>
-                  Nel silenzio dei boschi mediterranei, tra querce secolari,
-                  lecci maestosi e ginepri sardi spettinati dai venti di
-                  Scirocco e Maestrale, nasce la nostra interpretazione
-                  dell'arte dei bonsai che racconta una storia di pazienza,
-                  dedizione e amore per la natura. Ogni ramo modellato e ogni
-                  foglia curata riflettono l’equilibrio perfetto tra tradizione
-                  antica e spirito selvaggio di questa terra unica.
-                </p>
-              </div>
-            </section>
-            <aside class="colajx sidebar">
-              <div class="image">
-                <img
-                  width="1440"
-                  height="600"
-                  src="images/shop_bonsai.jpeg"
-                  alt="we-do-playground"
-                />
-              </div>
-            </aside>
+      <!-- About column section starts  -->
+      <section class="about">
+        <div class="column" id="weare">
+          <div class="image">
+            <img width="1440" height="600" src="images/banner-we-are.jpg" alt="Bonsai passione" />
           </div>
-        </section>
-        <!-- weAre section ends  -->
+          <div class="content">
+            <h1 class="heading">Passione<br />bonsai</h1>
+            <p>
+              Il bonsai è tempo lento,<br />
+              <span>cura quotidiana e attenzione ai dettagli.</span>
+            </p>
+            <div class="buttons"></div>
+          </div>
+        </div>
 
-        <!-- contactUs section starts  -->
-        <section class="contact" id="contactus">
-          <div class="column">
-            <div class="content">
-              <h1 class="heading">Contatti</h1>
+        <div class="column" id="wedo">
+          <div class="image">
+            <img width="1440" height="600" src="images/banner-we-do.jpg" alt="Studio e cura bonsai" />
+          </div>
+          <div class="content">
+            <h1 class="heading">Studio<br />e cura</h1>
+            <p>
+              Tecniche, osservazione e pratica costante,<br />
+              <span>per far crescere ogni albero in armonia.</span>
+            </p>
+            <div class="buttons"></div>
+          </div>
+        </div>
+
+        <div class="column" id="careers">
+          <div class="image">
+            <img width="1440" height="600" src="images/banner-carrers.jpg" alt="Essenziale bonsai" />
+          </div>
+          <div class="content">
+            <h1 class="heading">Essenziale<br />bonsai</h1>
+            <p>
+              Pochi elementi, scelti con cura,<br />
+              <span>per coltivare con semplicità e pazienza.</span>
+            </p>
+            <div class="buttons"></div>
+          </div>
+        </div>
+      </section>
+      <!-- weAre section starts  -->
+      <section class="container-ajx" id="we">
+        <div class="flex-ajx">
+          <section class="colajx mainajx">
+            <div id="update">
+              <h2>
+                Coltiviamo bonsai con passione, pazienza e rispetto per la
+                natura.<br />
+                La nostra storia affonda le radici in tempo, arte e armonia.
+              </h2>
               <p>
-                Francesco Uccheddu<br />
-                <span>Via Del Bonsai, 2b</span>
-                <br />
-                <span>Oristano</span>
-                <br />
-                <span> </span>
-                <br />
-                <span><i class="fa fa-phone"></i> +39 371 123456</span>
+                Coltiviamo bonsai con passione, pazienza e profondo rispetto
+                per la natura, dedicando tempo e cura a ogni singolo albero.
+                La nostra storia nasce dall’amore per questa antica arte, che
+                unisce tradizione e creatività, riflettendo l’armonia tra uomo
+                e ambiente. Ogni bonsai che curiamo racconta un viaggio fatto
+                di equilibrio, crescita lenta e consapevole, valori che
+                guidano il nostro lavoro e la nostra filosofia.
+              </p>
+              <br />
+              <h2>
+                L’arte del bonsai, tra querce, lecci e ginepri sardi
+                spettinati dal maestrale.
+              </h2>
+              <p>
+                Nel silenzio dei boschi mediterranei, tra querce secolari,
+                lecci maestosi e ginepri sardi spettinati dai venti di
+                Scirocco e Maestrale, nasce la nostra interpretazione
+                dell'arte dei bonsai che racconta una storia di pazienza,
+                dedizione e amore per la natura. Ogni ramo modellato e ogni
+                foglia curata riflettono l’equilibrio perfetto tra tradizione
+                antica e spirito selvaggio di questa terra unica.
               </p>
             </div>
-            <form
-              name="contact-form"
-              action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29"
-              method="POST"
-            >
-              <!-- <input type="text" name="Name" placeholder="nome"  required>
+          </section>
+          <aside class="colajx sidebar">
+            <div class="image">
+              <img width="1440" height="600" src="images/shop_bonsai2.png" alt="we-do-playground" />
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- weAre section ends  -->
+
+      <!-- contactUs section starts  -->
+      <section class="contact" id="contactus">
+        <div class="column">
+          <div class="content">
+            <h2 class="heading">Contatti</h2>
+            <p>
+              Francesco Uccheddu<br />
+              <span>Via Del Bonsai, 2b</span>
+              <br />
+              <span>Oristano</span>
+              <br />
+              <span> </span>
+              <br />
+              <span><i class="fa fa-phone"></i> +39 371 123456</span>
+            </p>
+          </div>
+          <form name="contact-form" action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29" method="POST">
+            <!-- <input type="text" name="Name" placeholder="nome"  required>
                      <input type="text" name="Email" placeholder="email" required>
                      <textarea name="Message" placeholder="messaggio" ></textarea> -->
-              <input type="hidden" name="_captcha" value="false" />
-              <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html"> -->
-              <input
-                type="hidden"
-                name="_next"
-                value="https://valentinocode.com/intimo/"
-              />
-              <!-- <button type="submit">Send</button> -->
-              <div class="container">
-                <div id="display_message"></div>
-                <div class="login">
-                  <input
-                    type="text"
-                    name="Nome"
-                    placeholder="nome"
-                    class="input"
-                    id="firstname"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="Cognome"
-                    placeholder="Cognome"
-                    class="input"
-                    id="lastname"
-                    required
-                  />
-                </div>
-                <div class="email">
-                  <input
-                    type="email"
-                    name="Email"
-                    placeholder="email"
-                    class="input"
-                    id="email"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="Telefono"
-                    placeholder="telefono"
-                    class="input"
-                    id="phone"
-                    required
-                  />
-                  <input
-                    type="hidden"
-                    name="_subject"
-                    value="Nuovo messaggio - Bonsai di Sardegna website"
-                  />
-                </div>
-                <div class="msg">
-                  <textarea
-                    class="area"
-                    name="Messaggio"
-                    placeholder="messaggio"
-                    required
-                    id="message"
-                  ></textarea>
-                </div>
-                <div>
-                  <button class="btn" type="submit" onclick="sendContact();">
-                    Invia >
-                  </button>
-                </div>
+            <input type="hidden" name="_captcha" value="false" />
+            <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html"> -->
+            <input type="hidden" name="_next" value="https://valentinocode.com/bonsai/" />
+            <!-- <button type="submit">Send</button> -->
+            <div class="container">
+              <div id="display_message"></div>
+              <div class="login">
+                <input type="text" name="Nome" placeholder="nome" class="input" id="firstname" required />
+                <input type="text" name="Cognome" placeholder="Cognome" class="input" id="lastname" required />
               </div>
-            </form>
-
-            <!-- <form action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29" method="POST">
+              <div class="email">
+                <input type="email" name="Email" placeholder="email" class="input" id="email" required />
+                <input type="text" name="Telefono" placeholder="telefono" class="input" id="phone" required />
+                <input type="hidden" name="_subject" value="Nuovo messaggio - Bonsai Fenosu website" />
+              </div>
+              <div class="msg">
+                <textarea class="area" name="Messaggio" placeholder="messaggio" required id="message"></textarea>
+              </div>
+              <div>
+                <button class="btn" type="submit" onclick="sendContact();">
+                  Invia >
+                </button>
+              </div>
+            </div>
+          </form>
+          <!-- <form action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29" method="POST">
                      <input type="text" name="Name" placeholder="nome"  required>
                      <input type="text" name="Email" placeholder="email" required>
                      <textarea name="Message" placeholder="messaggio" ></textarea>
                      <input type="hidden" name="_captcha" value="false">
                      <button type="submit">Send</button>
                   </form> -->
-          </div>
-        </section>
-        <!-- contact section ends  -->
-      </div>
-    </section>
-    <!-- home section ends  -->
-    <!-- footer starts  -->
-    <div class="footer">
-      <div class="box-container">
-        <ul class="socials">
-          <li>
-            <a
-              href="https://www.facebook.com/francesco.uccheddu.54"
-              rel="noreferrer"
-              aria-label="Facebook"
-              target="_blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-          </li>
-          <!-- <li><a href="https://www.linkedin.com/" rel="noreferrer" aria-label="Linkedin" target="_blank"><i class="fa fa-linkedin-square"></i></a></li> -->
-          <li>
-            <a
-              href="https://www.instagram.com/francescosantinibonsai"
-              rel="noreferrer"
-              aria-label="Instagram"
-              target="_blank"
-              ><i class="fa fa-instagram"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- </div> -->
-    <!-- footer ends -->
-    <!-- CookiePolicy starts  -->
-    <div class="wrapper">
-      <div id="consent-popup" class="hidden">
-        <p>
-          Questo sito utilizza i cookie per migliorare servizi ed esperienza
-          dell'utente. Se decidi di continuare la navigazione consideriamo che
-          accetti il loro uso. Puoi visualizzare qua la nostra
-          <a href="#">cookie policy</a>.
-          <!-- <a href="#">privacy policy</a> and <a href="#">cookie policy</a>. -->
-        </p>
-        <div class="item">
-          <a id="accept" href="#">OK</a>
         </div>
+      </section>
+      <!-- contact section ends  -->
+
+    </div>
+  </section>
+  <!-- home section ends  -->
+
+  <!-- footer starts  -->
+  <div class="footer">
+    <div class="box-container">
+      <ul class="socials">
+        <li>
+          <a href="https://www.facebook.com/" title="Visit our Facebook profile" rel="noreferrer" aria-label="Facebook"
+            target="_blank" rel="external noreferrer noopener"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" title="Visit our Instagram profile" rel="noreferrer"
+            aria-label="Instagram" target="_blank" rel="external noreferrer noopener"><i
+              class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://wa.me/3713693421" title="Visit our WhatsApp" aria-label="WhatsApp" target="_blank"
+            rel="noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </li>
+        </a>
+      </ul>
+      <p class="footer-info">© 2026 Bonsai Fenosu – PIVA 0123456789</p>
+    </div>
+  </div>
+  <!-- footer ends -->
+
+  <!-- CookiePolicy starts  -->
+  <div class="wrapper">
+    <div id="consent-popup" class="hidden">
+      <p>
+        Questo sito utilizza i cookie per migliorare servizi ed esperienza
+        dell'utente. Se decidi di continuare la navigazione consideriamo che
+        accetti il loro uso. Puoi visualizzare qua la nostra
+        <a href="cookie-policy.html">cookie policy</a>.
+        <!-- <a href="#">privacy policy</a> and <a href="#">cookie policy</a>. -->
+      </p>
+      <div class="item">
+        <a id="accept" href="#">OK</a>
       </div>
     </div>
-    <!-- CookiePolicy starts  -->
-    <!-- JavaScript section start -->
-    <script src="main.js" type="text/javascript"></script>
-    <!-- JavaScript section end -->
-  </body>
+  </div>
+  <!-- CookiePolicy starts  -->
+
+  <!-- JavaScript section start -->
+  <script src="main.js" type="text/javascript"></script>
+  <!-- JavaScript section end -->
+</body>
+
 </html>

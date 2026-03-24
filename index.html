@@ -10,9 +10,14 @@
   <link rel="shortcut icon" type="image/x-icon" href="./images/logo.ico" />
   <!-- font awesome icon socials cdn link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-<!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
- -->  <!-- custom css file link  -->
-  <link rel="stylesheet" href="css/style.css" />
+  <!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />--> 
+  <!-- custom css file link  -->
+<!--    <link rel="preload" href="css/style.css" as="style">
+  <link rel="stylesheet" href="css/style.css" /> -->
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+  <link rel="preload" href="fonts/Gotham-Book.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Gotham-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="images/slide-hello.jpg">
 </head>
 
 <body>
@@ -69,7 +74,7 @@
               </div>
             </div>
             <!-- next and previous buttons -->
-<!--             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <!--             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 
             <!-- the dots/circles -->
@@ -137,7 +142,8 @@
             </div>
             <div class="content">
               <h2 class="heading">Studio<br />e pratica</h2>
-              <p>Tecniche, osservazione e pratica costante,<br /><span>per far crescere ogni albero in armonia.</span></p>
+              <p>Tecniche, osservazione e pratica costante,<br /><span>per far crescere ogni albero in armonia.</span>
+              </p>
             </div>
           </div>
 
@@ -160,8 +166,10 @@
             <section class="colajx mainajx">
               <div id="update">
                 <h2>Coltiviamo bonsai con passione, pazienza e rispetto per la natura.</h2>
-                <p>La nostra storia affonda le radici in tempo, arte e armonia. Coltiviamo bonsai con passione, dedicando
-                  tempo e cura a ogni albero. Ogni bonsai racconta un viaggio di equilibrio, crescita lenta e consapevole.
+                <p>La nostra storia affonda le radici in tempo, arte e armonia. Coltiviamo bonsai con passione,
+                  dedicando
+                  tempo e cura a ogni albero. Ogni bonsai racconta un viaggio di equilibrio, crescita lenta e
+                  consapevole.
                 </p>
                 <h2>L’arte del bonsai tra querce, lecci e ginepri sardi spettinati dal maestrale.</h2>
                 <p>Nel silenzio dei boschi mediterranei, tra querce secolari e ginepri sardi, nasce la nostra
@@ -190,8 +198,7 @@
                 <span><i class="fa fa-phone"></i> +39 371 123456</span>
               </p>
             </div>
-            <form name="contact-form" action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29"
-              method="POST">
+            <form name="contact-form" action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29" method="POST">
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value="https://valentinocode.com/bonsai/" />
               <div class="container">
@@ -205,15 +212,16 @@
                 <div class="email">
                   <input type="email" name="Email" placeholder="email" class="input" id="email" aria-label="Email"
                     required />
-                  <input type="text" name="Telefono" placeholder="telefono" class="input" id="phone" aria-label="Telefono"
-                    required />
+                  <input type="text" name="Telefono" placeholder="telefono" class="input" id="phone"
+                    aria-label="Telefono" required />
                   <input type="hidden" name="_subject" value="Nuovo messaggio - Bonsai Fenosu website" />
                 </div>
                 <div class="msg">
                   <textarea class="area" name="Messaggio" placeholder="messaggio" required id="message"></textarea>
                 </div>
                 <div>
-                  <button class="btn" type="submit" aria-label="Invia form contatti" onclick="sendContact();">Invia ></button>
+                  <button class="btn" type="submit" aria-label="Invia form contatti" onclick="sendContact();">Invia
+                    ></button>
                 </div>
               </div>
             </form>

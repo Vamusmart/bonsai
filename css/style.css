@@ -1247,7 +1247,7 @@ input #phone {
 
   .home .content p,
   .home .content .text p {
-    font-size: calc(var(--font-normal) + 0.5rem);
+    font-size: calc(var(--font-normal) + 0.7rem);
   }
 
 }

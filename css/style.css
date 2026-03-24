@@ -38,23 +38,6 @@
   --attention: #bb1a06;
 }
 
-/* :root {
-  --grey: #e6f2ed;
-  --black: #050505;
-  --red: #127b61;
-  --green: #2ed383;
-} */
-
-/* :root {
-  --primary-green: #2ecc71;
-  --dark-green: #1e8449;
-  --light-green: #7dcea0;
-  --earth-brown: #a04000;
-  --sand: #fdf6ec;
-  --white: #ffffff;
-  --attention: #e67e22;
-} */
-
 :root {
   --nav-height: 75px;
 }
@@ -443,11 +426,13 @@ a.active {
   width: 23%;
   margin: 0 10%;
   text-align: left;
-  background-color: rgba(0, 0, 0, 0.55); /* più contrasto */
-  backdrop-filter: blur(4px); /* effetto moderno (opzionale) */
+  background-color: rgba(0, 0, 0, 0.55);
+  /* più contrasto */
+  backdrop-filter: blur(4px);
+  /* effetto moderno (opzionale) */
   top: calc(var(--nav-height) + 15rem);
   transform: translateY(-50%);
-    text-shadow: 0 1px 3px rgba(40, 181, 127, 0.8);
+  text-shadow: 0 1px 3px rgba(40, 181, 127, 0.8);
 
 }
 
@@ -605,7 +590,9 @@ img {
   background-color: var(--lightblue);
 }
 
-#we, #weare, #contactus {
+#we,
+#weare,
+#contactus {
   scroll-margin-top: calc(var(--nav-height) - 30px);
 }
 
@@ -628,7 +615,8 @@ img {
 }
 
 #wedo .buttons {
-  position: relative; /* Aggiunto solo perchè c'è z-index*/
+  position: relative;
+  /* Aggiunto solo perchè c'è z-index*/
   border: 1rem;
   z-index: 1000;
   margin-right: 10rem;
@@ -945,10 +933,6 @@ input #phone {
     font-size: 60%;
   }
 
-  .text {
-    /* color: yellow; */
-  }
-
   .nav-links a {
     font-size: var(--font-normal);
     letter-spacing: 2px;
@@ -982,10 +966,6 @@ input #phone {
 @media (max-width: 1024px) {
   html {
     font-size: 50%;
-  }
-
-  .text {
-    /* color: rgb(0, 17, 255); */
   }
 
   .mySlides {
@@ -1081,11 +1061,6 @@ input #phone {
     flex: initial;
   }
 
-  .text {
-    /* color: red; */
-  }
-
-
   h2 {
     font-size: calc(var(--font-normal) + 0.1rem);
   }
@@ -1137,9 +1112,6 @@ input #phone {
 }
 
 @media (max-width: 920px) {
-  .text {
-    /* color: pink; */
-  }
 
   .image img {
     height: 57rem;
@@ -1510,13 +1482,14 @@ input #phone {
   .about .column .content p {
     font-size: calc(var(--font-normal) + 0.5rem);
   }
-.about .column .heading {
-  font-size: calc(var(--font-large) + 1.5rem);
-}
 
-h2 {
-  font-size: calc(var(--font-normal) + 0.6rem);
-}
+  .about .column .heading {
+    font-size: calc(var(--font-large) + 1.5rem);
+  }
+
+  h2 {
+    font-size: calc(var(--font-normal) + 0.6rem);
+  }
 
   #wedo .column .content,
   .about .column .content {

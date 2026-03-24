@@ -199,6 +199,12 @@ header label {
   opacity: 0;
 }
 
+/* MAIN LANDMARK */
+main {
+  display: block;
+  padding-top: var(--nav-height); /* evita che l'header fisso copra il contenuto */
+}
+
 /**
  *  NAVBAR
  */

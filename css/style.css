@@ -104,6 +104,11 @@ body {
   background: var(--darkwhite);
 }
 
+body.loaded {
+  opacity:1;
+  transition: opacity 0.3s ease;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;

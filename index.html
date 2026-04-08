@@ -10,14 +10,14 @@
   <link rel="shortcut icon" type="image/x-icon" href="./images/logo.ico" />
   <!-- font awesome icon socials cdn link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />--> 
   <!-- custom css file link  -->
-<!--    <link rel="preload" href="css/style.css" as="style">
-  <link rel="stylesheet" href="css/style.css" /> -->
-  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-  <link rel="preload" href="fonts/Gotham-Book.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Gotham-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="images/slide-hello.jpg">
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">  
+   <link rel="preload" as="image" href="images/slide-hello.jpg">
+  <style>
+    body {
+      opacity: 0
+    }
+  </style>
 </head>
 
 <body>
@@ -179,7 +179,7 @@
             </section>
             <aside class="colajx sidebar">
               <div class="image">
-                <img width="1440" height="600" src="images/shop_bonsai2.png" alt="Shop e strumenti bonsai" />
+                <img width="1440" height="600" src="images/shop_bonsai.png" alt="Shop e strumenti bonsai" />
               </div>
             </aside>
           </div>
@@ -197,32 +197,41 @@
                 <span>Italia</span><br />
                 <span><i class="fa fa-phone"></i> +39 371 123456</span>
               </p>
-            </div>
-            <form name="contact-form" action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29" method="POST">
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://valentinocode.com/bonsai/" />
-              <div class="container">
-                <div id="display_message"></div>
-                <div class="login">
-                  <input type="text" name="Nome" placeholder="nome" class="input" id="firstname" aria-label="Nome"
-                    required />
-                  <input type="text" name="Cognome" placeholder="Cognome" class="input" id="lastname"
-                    aria-label="Cognome" required />
+              </div>
+              <form autocomplete="on" name="contact-form" action="https://formsubmit.co/c38f33a49534356b8013b7cba85e7b29"
+                method="POST">
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://valentinocode.com/bonsai/" />
+              
+                <div class="container">
+                  <div id="display_message"></div>
+              
+                  <div class="login">
+                    <input type="text" name="Nome" placeholder="nome" class="input" id="firstname" aria-label="Nome"
+                      autocomplete="given-name" required />
+                    <input type="text" name="Cognome" placeholder="Cognome" class="input" id="lastname" aria-label="Cognome"
+                      autocomplete="family-name" required />
+                  </div>
+              
+                  <div class="email">
+                    <input type="email" name="Email" placeholder="email" class="input" id="email" aria-label="Email"
+                      autocomplete="email" required />
+                    <input type="tel" name="Telefono" placeholder="telefono" class="input" id="phone" aria-label="Telefono"
+                      autocomplete="tel" required />
+                    <input type="hidden" name="_subject" value="Nuovo messaggio - Bonsai Fenosu website" />
+                  </div>
+              
+                  <div class="msg">
+                    <textarea class="area" name="Messaggio" placeholder="messaggio" id="message" aria-label="Messaggio"
+                      autocomplete="off" required></textarea>
+                  </div>
+              
+                  <div>
+                    <button class="btn" type="submit" aria-label="Invia form contatti" onclick="sendContact();">Invia ></button>
+                  </div>
                 </div>
-                <div class="email">
-                  <input type="email" name="Email" placeholder="email" class="input" id="email" aria-label="Email"
-                    required />
-                  <input type="text" name="Telefono" placeholder="telefono" class="input" id="phone"
-                    aria-label="Telefono" required />
-                  <input type="hidden" name="_subject" value="Nuovo messaggio - Bonsai Fenosu website" />
-                </div>
-                <div class="msg">
-                  <textarea class="area" name="Messaggio" placeholder="messaggio" required id="message"></textarea>
-                </div>
-                <div>
-                  <button class="btn" type="submit" aria-label="Invia form contatti" onclick="sendContact();">Invia
-                    ></button>
-                </div>
+              </form>
+              </div>
               </div>
             </form>
           </div>

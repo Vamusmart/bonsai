@@ -34,6 +34,7 @@
   --darkblue: #126362;
   --white: #ffffff;
   --darkwhite: #f9f9f9;
+    --darkgray: #cccccc;
   --lightdark: #1AA853;
   --attention: #bb1a06;
 }
@@ -48,6 +49,19 @@
   --font-large: 3rem;
 }
 
+::placeholder {
+  color: var(--darkgray); /* più visibile del default */
+  opacity: 1; /* importante per Safari */
+}
+
+/* Per compatibilità completa */
+input::placeholder,
+textarea::placeholder {
+  color: var(--darkgray);
+  opacity: 1;
+    font-family: "Gotham-Book", Arial, Helvetica, sans-serif;
+}
+
 #home {
   overflow: hidden;
 }
@@ -57,7 +71,6 @@
  */
 
 * {
-  font-family: "Gotham", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -102,6 +115,8 @@ html {
 
 body {
   background: var(--darkwhite);
+  font-family: "Gotham-Book", Arial, Helvetica, sans-serif;
+
 }
 
 body.loaded {
@@ -333,6 +348,14 @@ a.active {
   font-size: calc(var(--font-normal) + 0.2rem);
 }
 
+#consent-popup p a {
+  color: var(--lightblue);
+}
+
+#consent-popup p a:visited {
+  color: var(--lightdark);
+}
+
 .item {
   position: static;
   width: auto;
@@ -397,12 +420,13 @@ a.active {
 }
 
 .slideshow-container {
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
-  z-index: -1;
+  z-index: 1;
 }
 
 .mySlides {
@@ -496,7 +520,7 @@ a.active {
 
 .box-circles {
   position: absolute;
-  top: calc(var(--nav-height) + 10px);
+  top: calc(var(--nav-height) - 60px);
   left: 50%;
   transform: translateX(-50%);
   padding: 1em;
@@ -619,7 +643,7 @@ img {
 
 #wedo .column .content,
 .about .column .content {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   padding-bottom: 4rem;
 }
 

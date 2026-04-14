@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   </noscript> <!-- custom css file link  -->
   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>   <!-- Fallback CSS for users with JavaScript disabled -->
+  <noscript> <!-- Fallback CSS for users with JavaScript disabled -->
     <link rel="stylesheet" href="css/style.css">
   </noscript>
 </head>
@@ -23,8 +23,13 @@
 <body>
   <!-- header section starts  -->
   <header id="navbar">
-    <a href="#" class="logo"><img width="150" height="40" src="./images/logo_bonsai_white.webp" alt="Logo Bonsai Fenosu - Passione per i bonsai in Sardegna"
-        class="logo" /></a>
+    <a href="#" class="logo">
+      <img src="./images/logo_bonsai_white-185.webp" srcset="
+        ./images/logo_bonsai_white-185.webp 1x,
+        ./images/logo_bonsai_white-370.webp 2x
+      " width="185" height="41" alt="Logo Bonsai Fenosu - Passione per i bonsai in Sardegna" loading="eager"
+        fetchpriority="high" />
+    </a>
     <ul class="nav-links">
       <li><a href="#we">Chi siamo</a></li>
       <li><a href="#weare">I Bonsai</a></li>
@@ -71,31 +76,58 @@
             <div class="mySlides fade">
               <picture>
                 <source type="image/webp" srcset="
-                            images/slide-play-480.webp   480w,
-                            images/slide-play-768.webp   768w,
-                            images/slide-play-1440.webp 1440w
-                                        " sizes="(max-width: 480px) 100vw, (max-width: 1024px) 768px, 1440px" />
-                <img src="images/slide-play.jpg"
-                 alt="Bonsai ornamentale con chioma equilibrata e tronco modellato, coltivato con tecniche tradizionali" loading="lazy"
-                  width="1440" height="798" />
+        images/slide-hello-480.webp 480w,
+        images/slide-hello-768.webp 768w,
+        images/slide-hello-1024.webp 1024w,
+        images/slide-hello-1440.webp 1440w
+      " sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 900px" />
+
+                <img src="images/slide-hello-1024.jpg"
+                  alt="Bonsai di Euonymus fortunei Jersey, fogliame compatto e forma elegante" width="1440" height="798"
+                  fetchpriority="high" loading="eager" />
               </picture>
+
               <div class="text">
-                <h2 class="titolo-stile">Jersey<br /><span></span></h2>
-                <p class="testo-stile" role="text">Euonymus fortunei</p>
+                <h2 class="titolo-stile">Pinky<br /><span></span></h2>
+                <p class="testo-stile">Azalea Satsuki Momoka</p>
               </div>
             </div>
+
             <div class="mySlides fade">
               <picture>
                 <source type="image/webp" srcset="
-                            images/slide-circle-480.webp   480w,
-                            images/slide-circle-768.webp   768w,
-                            images/slide-circle-1440.webp 1440w
-                                        " sizes="(max-width: 480px) 100vw, (max-width: 1024px) 768px, 1440px" />
-                <img src="images/slide-circle.jpg" alt="Bonsai di Crataegus laevigata Charen, rami intrecciati e foglie delicate in forma armoniosa" loading="lazy"  width="1440" height="798" />
+        images/slide-play-480.webp 480w,
+        images/slide-play-768.webp 768w,
+        images/slide-play-1024.webp 1024w,
+        images/slide-play-1440.webp 1440w
+      " sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 900px" />
+
+                <img src="images/slide-play-1024.jpg" alt="Bonsai ornamentale con chioma equilibrata e tronco modellato"
+                  width="1440" height="798" loading="lazy" />
               </picture>
+
+              <div class="text">
+                <h2 class="titolo-stile">Jersey<br /><span></span></h2>
+                <p class="testo-stile">Euonymus fortunei</p>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <picture>
+                <source type="image/webp" srcset="
+        images/slide-circle-480.webp 480w,
+        images/slide-circle-768.webp 768w,
+        images/slide-circle-1024.webp 1024w,
+        images/slide-circle-1440.webp 1440w
+      " sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 900px" />
+
+                <img src="images/slide-circle-1024.jpg" alt="Bonsai di Crataegus laevigata Charen con rami intrecciati"
+                  width="1440" height="798" loading="lazy" />
+              </picture>
+
               <div class="text">
                 <h2 class="titolo-stile">Charen<br /><span></span></h2>
-                <p class="testo-stile" role="text">Crataegus laevigata</p>
+                <p class="testo-stile">Crataegus laevigata</p>
               </div>
             </div>
             <!-- The dots/circles -->
@@ -113,11 +145,11 @@
           <div class="box-container">
             <div class="box">
               <div class="box-pic">
-                 <picture>
-                <source srcset="./images/card-play.webp" type="image/webp" />
-                <img width="480" height="240" src="./images/card-play.jpg"
-                  alt="Coltivare bonsai guida pratica" loading="lazy" />
-              </picture>
+                <picture>
+                  <source srcset="./images/card-play.webp" type="image/webp" />
+                  <img width="480" height="240" src="./images/card-play.jpg" alt="Coltivare bonsai guida pratica"
+                    loading="lazy" />
+                </picture>
               </div>
               <div class="box-text">
                 <p>Coltivare bonsai è un dialogo tra natura e noi stessi: non servono esperti, ma piccoli passi per
@@ -126,11 +158,11 @@
             </div>
             <div class="box">
               <div class="box-pic">
-                 <picture>
-                <source srcset="./images/card-simplicity.webp" type="image/webp" />
-                <img width="480" height="240" src="./images/card-simplicity.jpg"
-                  alt="Cura e crescita del bonsai" loading="lazy" />
-              </picture>
+                <picture>
+                  <source srcset="./images/card-simplicity.webp" type="image/webp" />
+                  <img width="480" height="240" src="./images/card-simplicity.jpg" alt="Cura e crescita del bonsai"
+                    loading="lazy" />
+                </picture>
               </div>
               <div class="box-text">
                 <p>Il bonsai richiede cura, tecniche e un po' di pazienza: con attenzione, il tuo albero crescerà sano e
@@ -139,11 +171,11 @@
             </div>
             <div class="box">
               <div class="box-pic">
-                 <picture>
-                <source srcset="./images/card-innovation.webp" type="image/webp" />
-                <img width="480" height="240" src="./images/card-innovation.jpg"
-                  alt="Segreti dei bonsai per ogni stagione" loading="lazy" />
-              </picture>
+                <picture>
+                  <source srcset="./images/card-innovation.webp" type="image/webp" />
+                  <img width="480" height="240" src="./images/card-innovation.jpg"
+                    alt="Segreti dei bonsai per ogni stagione" loading="lazy" />
+                </picture>
               </div>
               <div class="box-text">
                 <p>Segreti unici per ciascun bonsai e stagione, che rivelano la bellezza effimera e la forza incredibile
@@ -158,15 +190,15 @@
         <section class="about">
           <div class="column" id="weare">
             <div class="image">
-               <picture>
-              <source type="image/webp" srcset="
+              <picture>
+                <source type="image/webp" srcset="
                     images/banner-we-are-480.webp   480w,
                     images/banner-we-are-768.webp   768w,
                     images/banner-we-are-1440.webp 1440w
                   " sizes="(max-width: 480px) 100vw, (max-width: 1024px) 768px, 1440px" />
-              <img src="images/banner-we-are.jpg" alt="Passione bonsai immagine"
-                loading="lazy" width="1440" height="600" style="display: block" />
-            </picture>
+                <img src="images/banner-we-are.jpg" alt="Passione bonsai immagine" loading="lazy" width="1440"
+                  height="600" style="display: block" />
+              </picture>
             </div>
             <div class="content">
               <h2 class="heading">Passione<br />bonsai</h2>
@@ -176,16 +208,15 @@
 
           <div class="column" id="wedo">
             <div class="image">
-                       <picture>
-              <source type="image/webp" srcset="
+              <picture>
+                <source type="image/webp" srcset="
                     images/banner-we-do-480.webp   480w,
                     images/banner-we-do-768.webp   768w,
                     images/banner-we-do-1440.webp 1440w
                   " sizes="(max-width: 480px) 100vw, (max-width: 1024px) 768px, 1440px" />
-              <img src="images/banner-we-do.jpg"
-                alt="Studio e cura bonsai immagine"
-                loading="lazy" width="1440" height="600" style="display: block" />
-            </picture>
+                <img src="images/banner-we-do.jpg" alt="Studio e cura bonsai immagine" loading="lazy" width="1440"
+                  height="600" style="display: block" />
+              </picture>
             </div>
             <div class="content">
               <h2 class="heading">Studio<br />e pratica</h2>
@@ -197,15 +228,14 @@
           <div class="column" id="careers">
             <div class="image">
               <picture>
-              <source type="image/webp" srcset="
+                <source type="image/webp" srcset="
                     images/banner-carrers-480.webp   480w,
                     images/banner-carrers-768.webp   768w,
                     images/banner-carrers-1440.webp 1440w
                   " sizes="(max-width: 480px) 100vw, (max-width: 1024px) 768px, 1440px" />
-              <img src="images/banner-carrers.jpg"
-                alt="Essenziale bonsai immagine"
-                loading="lazy" width="1440" height="600" style="display: block" />
-            </picture>
+                <img src="images/banner-carrers.jpg" alt="Essenziale bonsai immagine" loading="lazy" width="1440"
+                  height="600" style="display: block" />
+              </picture>
             </div>
             <div class="content">
               <h2 class="heading">Miniature<br />di pregio</h2>
@@ -232,16 +262,16 @@
                   tradizione antica e spirito selvaggio di questa terra unica.</p>
               </div>
             </section>
-           <aside class="colajx sidebar">
-            <div class="image">
-              <picture>
-                <source srcset="images/shop_bonsai.webp" type="image/webp" />
-                <img width="1440" height="600" src="images/shop_bonsai.jpg"
-                  alt="Bonsai giapponese in vaso in fase di crescita, coltivato a Oristano e spedito in tutta Italia" loading="lazy"
-                  decoding="async" />
-              </picture>
-            </div>
-          </aside>
+            <aside class="colajx sidebar">
+              <div class="image">
+                <picture>
+                  <source srcset="images/shop_bonsai.webp" type="image/webp" />
+                  <img width="1440" height="600" src="images/shop_bonsai.jpg"
+                    alt="Bonsai giapponese in vaso in fase di crescita, coltivato a Oristano e spedito in tutta Italia"
+                    loading="lazy" decoding="async" />
+                </picture>
+              </div>
+            </aside>
           </div>
         </section>
         <!-- we are section ends -->

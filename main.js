@@ -1,86 +1,99 @@
-/////// Cookie starts//////////
+/////// COOKIE START ///////
 
 const cookieStorage = {
   getItem: (item) => {
     const cookies = document.cookie
       .split(";")
       .map((cookie) => cookie.split("="))
-      .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+      .reduce((acc, [key, value]) => {
+        acc[key.trim()] = value;
+        return acc;
+      }, {});
     return cookies[item];
   },
+
   setItem: (item, value) => {
-    document.cookie = `${item}=${value};`;
+    document.cookie = `${item}=${value}; path=/`;
   },
 };
 
 const storageType = cookieStorage;
-const consentPropertyName = "Playground - HelloCookie";
+const consentPropertyName = "Playground-HelloCookie";
+
 const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+
 const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
-window.onload = () => {
-
+document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("loaded");
 
-  const acceptFn = (event) => {
-    saveToStorage(storageType);
-    consentPopup.classList.add("hidden");
-  };
   const consentPopup = document.getElementById("consent-popup");
   const acceptBtn = document.getElementById("accept");
-  acceptBtn.addEventListener("click", acceptFn);
 
-  if (shouldShowPopup(storageType)) {
-    setTimeout(() => {
-      consentPopup.classList.remove("hidden");
-    }, 2000);
+  if (acceptBtn && consentPopup) {
+    const acceptFn = () => {
+      saveToStorage();
+      consentPopup.classList.add("hidden");
+    };
+
+    acceptBtn.addEventListener("click", acceptFn);
+
+    if (shouldShowPopup()) {
+      setTimeout(() => {
+        consentPopup.classList.remove("hidden");
+      }, 2000);
+    }
   }
-};
+});
 
-////// Cookie ends ///////
+/////// COOKIE END ///////
 
-///// Navbar starts /////
-document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links li');
+
+///// NAVBAR START /////
+
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".nav-links li");
   const navbar = document.getElementById("navbar");
 
-  // Toggle menu on burger click
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
-    burger.classList.toggle('toggle');
+  if (!burger || !nav || !navbar) return;
 
-    // Animate links
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+    burger.classList.toggle("toggle");
+
     navLinks.forEach((link, index) => {
       link.style.animation = link.style.animation
-        ? ''
+        ? ""
         : `navLinkFade 0.5s ease forwards ${index / 5 + 0.5}s`;
     });
   });
 
-  // Chiudi il menu quando si clicca un link
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('nav-active');
-      burger.classList.remove('toggle');
-      navLinks.forEach(link => link.style.animation = '');
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("nav-active");
+      burger.classList.remove("toggle");
+      navLinks.forEach((l) => (l.style.animation = ""));
     });
   });
 
-  // Aggiungi classe 'scrolled' al navbar quando si scrolla
-  window.addEventListener('scroll', () => {
-    const scroll = document.documentElement.scrollTop;
-    navbar.classList.toggle('scrolled', scroll > 0);
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 0);
   });
 });
-///// navbar ends /////
 
-///// Slider starts /////
+///// NAVBAR END /////
+
+
+///// SLIDER START /////
 
 let slideIndex = 1;
 let timer = null;
-showSlides(slideIndex);
+
+document.addEventListener("DOMContentLoaded", () => {
+  showSlides(slideIndex);
+});
 
 const plusSlides = (n) => {
   clearTimeout(timer);
@@ -93,37 +106,43 @@ const currentSlide = (n) => {
 };
 
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n == undefined) {
-    n = ++slideIndex;
+
+  if (!slides.length) return;
+
+  if (n === undefined) {
+    slideIndex++;
+  } else {
+    slideIndex = n;
   }
-  if (n > slides.length) {
-    slideIndex = 1;
+
+  if (slideIndex > slides.length) slideIndex = 1;
+  if (slideIndex < 1) slideIndex = slides.length;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
   }
-  if (n < 1) {
-    slideIndex = slides.length;
+
+  for (let i = 0; i < dots.length; i++) {
+    if (dots[i]) dots[i].classList.remove("active");
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+
+  slides[slideIndex - 1].classList.add("active");
+  if (dots[slideIndex - 1]) {
+    dots[slideIndex - 1].classList.add("active");
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  timer = setTimeout(showSlides, 8000); /* 8 seconds */
+
+  timer = setTimeout(() => showSlides(), 8000);
 }
 
-///// slider ends /////
+///// SLIDER END /////
 
-///// Contact us starts /////
 
-// Group all fields into an object
+///// CONTACT START /////
+
 const fields = {};
 
-// Linking all the fields to our fields object
 document.addEventListener("DOMContentLoaded", () => {
   fields.firstName = document.getElementById("firstName");
   fields.lastName = document.getElementById("lastName");
@@ -131,38 +150,30 @@ document.addEventListener("DOMContentLoaded", () => {
   fields.message = document.getElementById("message");
 });
 
-// Checking that the field is not empty
-const isNotEmpty = (value) => {
-  if (value == null || typeof value == "undefined") return false;
-  return value.length > 0;
-};
+const isNotEmpty = (value) => value && value.trim().length > 0;
 
-// Check if a string is an email
 const isEmail = (email) => {
-  let regex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  const regex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   return regex.test(String(email).toLowerCase());
 };
 
-// Field validation function
-
-const error_message = document.getElementById("error_message");
 const fieldValidation = (field, validationFunction) => {
-  if (field == null) return false;
+  if (!field) return false;
 
-  let isFieldValid = validationFunction(field.value);
-  if (!isFieldValid) {
-    // field.className = 'placeholderRed';
-    text = "Please Enter valid Email and Message";
-    display_message.innerHTML = text;
+  const valid = validationFunction(field.value);
+
+  if (!valid) {
+    if (typeof display_message !== "undefined") {
+      display_message.innerHTML = "Controlla email e messaggio";
+    }
+    field.style.borderColor = "red";
   } else {
-    field.className = "";
+    field.style.borderColor = "";
   }
 
-  return isFieldValid;
+  return valid;
 };
-
-// combine all the checks for email and message
 
 const isValid = () => {
   let valid = true;
@@ -173,7 +184,6 @@ const isValid = () => {
   return valid;
 };
 
-// User class constructor
 class User {
   constructor(firstName, lastName, email, message) {
     this.firstName = firstName;
@@ -183,25 +193,28 @@ class User {
   }
 }
 
-//Sending the contact form data with JavaScript
 const sendContact = () => {
+  const display_message = document.getElementById("display_message");
+
   if (isValid()) {
-    let usr = new User(email.value, message.value);
+    const usr = new User(
+      fields.firstName?.value,
+      fields.lastName?.value,
+      fields.email?.value,
+      fields.message?.value
+    );
 
-    // alert("Thanks for your message.")
-    text = "Grazie per il messaggio.";
-    display_message.innerHTML = text;
-    document.getElementById("email").style.display = "none";
-    document.getElementById("message").style.display = "none";
+    if (display_message) {
+      display_message.innerHTML = "Grazie per il messaggio.";
+    }
+
+    if (fields.email) fields.email.style.display = "none";
+    if (fields.message) fields.message.style.display = "none";
   } else {
-    // text("Fill your email and message fields, please")
-    // field.className = 'placeholderRed';
-
-    text = "Ricontrolla la tua email e il tuo messaggio";
-    display_message.innerHTML = text;
-    document.getElementById("email").style.borderColor = "red";
-    document.getElementById("message").style.borderColor = "red";
+    if (display_message) {
+      display_message.innerHTML = "Ricontrolla email e messaggio";
+    }
   }
 };
 
-///// Contact us ends /////
+///// CONTACT END /////

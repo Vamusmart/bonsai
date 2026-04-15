@@ -8,6 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bonsai Fenosu </title>
   <link rel="shortcut icon" type="image/x-icon" href="./images/logo.ico" />
+  <link rel="preload" as="image" href="images/slide-hello-768.webp" imagesrcset="
+    images/slide-hello-340.webp 340w,
+    images/slide-hello-480.webp 480w,
+    images/slide-hello-768.webp 768w,
+    images/slide-hello-1024.webp 1024w,
+    images/slide-hello-1440.webp 1440w
+  " imagesizes="100vw" />
   <!-- font awesome icon socials cdn link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print"
     onload="this.media='all'">
@@ -58,7 +65,7 @@
           <div class="slideshow-container">
 
             <!-- SLIDE 1 -->
-            <div class="mySlides fade">
+            <div class="mySlides fade active" style="opacity:1; visibility:visible;">
               <picture>
                 <source type="image/webp" srcset="
             images/slide-hello-340.webp 340w,
@@ -68,13 +75,11 @@
             images/slide-hello-1440.webp 1440w
           " sizes="(max-width: 480px) 100vw,
                  (max-width: 1024px) 768px,
-                 1440px" />
-
-                <img src="images/slide-hello-1024.jpg"
-                  alt="Bonsai di Euonymus fortunei Jersey, fogliame compatto e forma elegante in vaso decorativo"
-                  fetchpriority="high" loading="eager" width="1440" height="798" />
+                 1440px" fetchpriority="high" />
+                <img src="images/slide-hello-1024.webp"
+                  alt="Bonsai di Euonymus fortunei Jersey, fogliame compatto e forma elegante" width="1440" height="798"
+                  fetchpriority="high" decoding="async" loading="eager" />
               </picture>
-
               <div class="text">
                 <h2 class="titolo-stile">Pinky<br /><span></span></h2>
                 <p class="testo-stile">Azalea Satsuki Momoka</p>
@@ -82,30 +87,6 @@
             </div>
 
             <!-- SLIDE 2 -->
-            <div class="mySlides fade">
-              <picture>
-                <source type="image/webp" srcset="
-            images/slide-hello-340.webp 340w,
-            images/slide-hello-480.webp 480w,
-            images/slide-hello-768.webp 768w,
-            images/slide-hello-1024.webp 1024w,
-            images/slide-hello-1440.webp 1440w
-          " sizes="(max-width: 768px) 100vw,
-                 (max-width: 1024px) 90vw,
-                 900px" />
-
-                <img src="images/slide-hello-1024.jpg"
-                  alt="Bonsai di Euonymus fortunei Jersey, fogliame compatto e forma elegante" width="1440" height="798"
-                  fetchpriority="high" loading="eager" />
-              </picture>
-
-              <div class="text">
-                <h2 class="titolo-stile">Pinky<br /><span></span></h2>
-                <p class="testo-stile">Azalea Satsuki Momoka</p>
-              </div>
-            </div>
-
-            <!-- SLIDE 3 -->
             <div class="mySlides fade">
               <picture>
                 <source type="image/webp" srcset="
@@ -117,18 +98,16 @@
           " sizes="(max-width: 768px) 100vw,
                  (max-width: 1024px) 90vw,
                  900px" />
-
-                <img src="images/slide-play-1024.jpg" alt="Bonsai ornamentale con chioma equilibrata e tronco modellato"
+                <img src="images/slide-play-1024.webp" alt="Bonsai ornamentale con chioma equilibrata e tronco modellato"
                   width="1440" height="798" loading="lazy" />
               </picture>
-
               <div class="text">
                 <h2 class="titolo-stile">Jersey<br /><span></span></h2>
                 <p class="testo-stile">Euonymus fortunei</p>
               </div>
             </div>
 
-            <!-- SLIDE 4 -->
+            <!-- SLIDE 3 -->
             <div class="mySlides fade">
               <picture>
                 <source type="image/webp" srcset="
@@ -140,11 +119,9 @@
           " sizes="(max-width: 768px) 100vw,
                  (max-width: 1024px) 90vw,
                  900px" />
-
-                <img src="images/slide-circle-1024.jpg" alt="Bonsai di Crataegus laevigata Charen con rami intrecciati"
+                <img src="images/slide-circle-1024.webp" alt="Bonsai di Crataegus laevigata Charen con rami intrecciati"
                   width="1440" height="798" loading="lazy" />
               </picture>
-
               <div class="text">
                 <h2 class="titolo-stile">Charen<br /><span></span></h2>
                 <p class="testo-stile">Crataegus laevigata</p>
